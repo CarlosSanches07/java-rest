@@ -1,6 +1,8 @@
 package user;
 
+import db.Db;
 import java.util.ArrayList;
+import org.json.simple.JSONObject;
 
 public class Client {
     private int id;
@@ -83,22 +85,28 @@ public class Client {
         
      */
     public ArrayList<Client> list() {
-        Client c = new Client();
-        c.setName("saasldfjdks");
-        Client c2 = new Client();
-        c2.setName("asjdiyuewbf");
+        Db db = new Db("C:\\Users\\carlos.roberto\\Documents\\java-rest\\rest-java\\src\\main\\java\\db\\db.json");
         ArrayList<Client> l = new ArrayList<Client>();
-        l.add(c);
-        l.add(c2);
-
+        for (Object item : db.getList()) {
+            JSONObject obj =(JSONObject) item;
+            Client c = new Client();
+            c.setId( Integer.parseInt(obj.get("id").toString()));
+            c.setName( (String) obj.get("name"));
+            c.setEmail( (String) obj.get("email"));
+            c.setPassword( (String) obj.get("password"));
+            c.setTel( (String) obj.get("tel"));
+            l.add(c);
+        }
         return l;
     }
 
     /**
      * @param client the client to create
      */
-    public void create(Client client) {
-        client = new Client();
+    public void create(Object client) {
+        System.out.println(client);
+        Db db = new Db("C:\\Users\\carlos.roberto\\Documents\\java-rest\\rest-java\\src\\main\\java\\db\\db.json");
+        db.create(client); 
     }
 
     /**

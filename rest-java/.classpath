@@ -10,17 +10,17 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="Users/carlos.roberto/Documents/java-rest/rest-java/target/classes" path="Users/carlos.roberto/Documents/java-rest/rest-java/src/main/java/user">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" output="Users/carlos.roberto/Documents/java-rest/rest-java/target/test-classes" path="Users/carlos.roberto/Documents/java-rest/rest-java/src/test/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="Users/carlos.roberto/Documents/java-rest/rest-java/target/classes" path="Users/carlos.roberto/Documents/java-rest/rest-java/src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="Users/carlos.roberto/Documents/java-rest/rest-java/target/classes"/>
